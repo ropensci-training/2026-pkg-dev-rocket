@@ -7,7 +7,7 @@ layout: list
 weight: 11
 output: hugodown::md_document
 countdown: true
-rmd_hash: 9fb31643aa86da56
+rmd_hash: 0093df30e65952a5
 
 ---
 
@@ -43,12 +43,6 @@ Después, elige una cosa para mejorar en tu paquete.
 
 ------------------------------------------------------------------------
 
-## Recordatorios
-
-:sleeping_face: Lo vimos en <https://codigo-hermoso.netlify.app/>
-
-------------------------------------------------------------------------
-
 ## Interfaz
 
 ------------------------------------------------------------------------
@@ -76,9 +70,9 @@ Conoce al [paquete cli](https://blog.r-hub.io/2023/11/30/cliff-notes-about-cli/)
 
 ¿Cómo controlar la verbosidad?
 
--   argumento en cada función :weary:
+- argumento en cada función :weary:
 
--   [opción global à la `usethis.quiet`](https://ropensci.org/blog/2024/02/06/verbosity-control-packages/)
+- [opción global à la `usethis.quiet`](https://ropensci.org/blog/2024/02/06/verbosity-control-packages/)
 
 <div class="highlight">
 
@@ -102,9 +96,9 @@ Para leer más: <https://ropensci.org/blog/2024/02/06/verbosity-control-packages
 
 ### Mensajes de error
 
--   Consejos sobre el contenido en el [guía de estilo de tidyverse](https://style.tidyverse.org/error-messages.html) con ejemplos.
+- Consejos sobre el contenido en el [guía de estilo de tidyverse](https://style.tidyverse.org/error-messages.html) con ejemplos.
 
--   Interfaz con [`cli::cli_abort()`](https://cli.r-lib.org/reference/cli_abort.html)
+- Interfaz con [`cli::cli_abort()`](https://cli.r-lib.org/reference/cli_abort.html)
 
 <div class="highlight">
 
@@ -114,7 +108,7 @@ Para leer más: <https://ropensci.org/blog/2024/02/06/verbosity-control-packages
 <span>    i <span class='o'>=</span> <span class='s'>"Read the tidyverse style guide."</span></span>
 <span>  <span class='o'>)</span></span>
 <span><span class='o'>)</span></span>
-<span><span class='c'>#&gt; <span style='color: #BBBB00; font-weight: bold;'>Error</span><span style='font-weight: bold;'> in `.f()`:</span></span></span>
+<span><span class='c'>#&gt; <span style='color: #BBBB00; font-weight: bold;'>Error</span><span style='font-weight: bold;'>:</span></span></span>
 <span><span class='c'>#&gt; <span style='color: #BBBB00;'>!</span> Can't find good error message.</span></span>
 <span><span class='c'>#&gt; <span style='color: #00BBBB;'>ℹ</span> Read the tidyverse style guide.</span></span>
 <span></span></code></pre>
@@ -133,11 +127,11 @@ Tal vez con AI: <https://simonpcouch.github.io/chores/reference/cli_helper.html>
 
 ### Comprobación de argumentos
 
--   Documenta el tipo de argumento.
+- Documenta el tipo de argumento.
 
--   Comprueba los argumentos. [`rlang::arg_match()`](https://rlang.r-lib.org/reference/arg_match.html) por ejemplo.
+- Comprueba los argumentos. [`rlang::arg_match()`](https://rlang.r-lib.org/reference/arg_match.html) por ejemplo.
 
-Más información: [Comprobar las entradas de tus funciones en R](https://blog.r-hub.io/2022/03/10/input-checking/) por Hugo Gruson , Sam Abbott , Carl Pearson.
+Más información: [Comprobar las entradas de tus funciones en R](https://blog.r-hub.io/2022/03/10/input-checking/) por Hugo Gruson, Sam Abbott, Carl Pearson.
 
 ------------------------------------------------------------------------
 
@@ -147,25 +141,21 @@ Más información: [Comprobar las entradas de tus funciones en R](https://blog.r
 
 ------------------------------------------------------------------------
 
-## Interfaz :microphone: `stop()` :microphone:
+## Interfaz <br/> :microphone: `stop()` :microphone:
 
--   Bonitos mensajes con {cli}.
--   Mensajes de error con {cli}, guía de tidyverse.
--   Comprobación de argumentos con rlang, entrada del blog R-hub.
+- Bonitos mensajes con {cli}.
+- Mensajes de error con {cli}, guía de tidyverse.
+- Comprobación de argumentos con {rlang}, entrada del blog R-hub.
 
-------------------------------------------------------------------------
+<div class="fragment">
 
-## Interfaz :microphone: `stop()` :microphone:
+Por favor, escribi en el chat
 
--   Bonitos mensajes con {cli}.
--   Mensajes de error con {cli}, guía de tidyverse.
--   Comprobación de argumentos con rlang, entrada del blog R-hub.
+- ¡Algo que te haya parecido interesante!
+- ¡Algo con lo que no estabas de acuerdo!
+- ¿Una experiencia buena/mala?
 
-Por favor, publícalo en el chat
-
--   ¡Algo que te haya parecido interesante!
--   ¡Algo con lo que no estabas de acuerdo!
--   ¿Una experiencia buena/mala reciente con estas herramientas?
+</div>
 
 ------------------------------------------------------------------------
 
@@ -177,8 +167,8 @@ Por favor, publícalo en el chat
 
 ¿Esta dependencia provoca alegría? :wink:
 
--   Una dependencia es un código que otra persona ha elaborado y probado cuidadosamente.
--   Una dependencia es un punto de fallo.
+- Una dependencia es un código que otra persona ha elaborado y probado cuidadosamente.
+- Una dependencia es un punto de fallo.
 
 Más información: [Dependencias: Mentalidad y antecedentes](https://r-pkgs.org/dependencies-mindset-background.html) en el libro R Packages de Hadley Wickham y Jenny Bryan.
 
@@ -188,13 +178,13 @@ Más información: [Dependencias: Mentalidad y antecedentes](https://r-pkgs.org/
 
 En la [Guía de desarrollo de rOpenSci](https://devguide.ropensci.org/building.html#recommended-scaffolding)
 
--   curl, httr2, crul, httr. No RCurl. Para un nuevo paquete, httr2 en vez de httr.
+- curl, httr2, crul, httr. No RCurl. Para un nuevo paquete, httr2 en vez de httr.
 
--   jsonlite. No rjson ni RJSONIO.
+- jsonlite. No rjson ni RJSONIO.
 
--   xml2. No XML
+- xml2. No XML
 
--   sf, suites espaciales desarrolladas por las comunidades r-spatial y rspatial. No sp, rgdal, maptools, rgeos.
+- sf, suites espaciales desarrolladas por las comunidades r-spatial y rspatial. No sp, rgdal, maptools, rgeos.
 
 ------------------------------------------------------------------------
 
@@ -228,249 +218,25 @@ Está bien decir no a las peticiones de funciones. [Ejemplo](https://github.com/
 
 ------------------------------------------------------------------------
 
-## Menos código :microphone: `stop()` :microphone:
+## Menos código <br/> :microphone: `stop()` :microphone:
 
--   Elegir dependencias.
--   Dependencias a evitar.
--   Definir el ámbito del paquete.
-
-------------------------------------------------------------------------
-
-## Menos código :microphone: `stop()` :microphone:
-
--   Elegir dependencias.
--   Dependencias a evitar.
--   Definir el ámbito del paquete.
-
-Por favor, publícalo en el chat
-
--   ¡Algo que te haya parecido interesante!
--   ¡Algo con lo que no estabas de acuerdo!
--   ¿Una experiencia buena/mala reciente con estas herramientas?
+- Elegir dependencias.
+- Dependencias a evitar.
+- Definir el ámbito del paquete.
 
 ------------------------------------------------------------------------
 
-## Código
+## Menos código <br/> :microphone: `stop()` :microphone:
 
-------------------------------------------------------------------------
+- Elegir dependencias.
+- Dependencias a evitar.
+- Definir el ámbito del paquete.
 
-### :sleeping_face: Código lo más simple posible: "early return"
+Por favor, escribi en el chat
 
-:eyes:
-
-<div class="highlight">
-
-<pre class='chroma'><code class='language-r' data-lang='r'><span><span class='nv'>do_this</span> <span class='o'>&lt;-</span> <span class='kr'>function</span><span class='o'>(</span><span class='o'>)</span> <span class='o'>&#123;</span></span>
-<span>  <span class='kr'>if</span> <span class='o'>(</span><span class='o'>!</span><span class='nf'>is_that_present</span><span class='o'>(</span><span class='o'>)</span><span class='o'>)</span> <span class='o'>&#123;</span></span>
-<span>    <span class='kr'><a href='https://rdrr.io/r/base/function.html'>return</a></span><span class='o'>(</span><span class='kc'>NULL</span><span class='o'>)</span></span>
-<span>  <span class='o'>&#125;</span> <span class='kr'>else</span> <span class='o'>&#123;</span></span>
-<span>    <span class='c'># more code</span></span>
-<span>    <span class='kr'><a href='https://rdrr.io/r/base/function.html'>return</a></span><span class='o'>(</span><span class='nv'>blip</span><span class='o'>)</span></span>
-<span>  <span class='o'>&#125;</span></span>
-<span><span class='o'>&#125;</span></span>
-<span></span></code></pre>
-
-</div>
-
-------------------------------------------------------------------------
-
-### Código lo más simple posible: "early return"
-
-:sparkles:
-
-<div class="highlight">
-
-<pre class='chroma'><code class='language-r' data-lang='r'><span><span class='nv'>do_this</span> <span class='o'>&lt;-</span> <span class='kr'>function</span><span class='o'>(</span><span class='o'>)</span> <span class='o'>&#123;</span></span>
-<span>  <span class='kr'>if</span> <span class='o'>(</span><span class='o'>!</span><span class='nf'>is_that_present</span><span class='o'>(</span><span class='o'>)</span><span class='o'>)</span> <span class='o'>&#123;</span></span>
-<span>    <span class='kr'><a href='https://rdrr.io/r/base/function.html'>return</a></span><span class='o'>(</span><span class='kc'>NULL</span><span class='o'>)</span></span>
-<span>  <span class='o'>&#125;</span></span>
-<span>  <span class='c'># more code</span></span>
-<span></span>
-<span>  <span class='nv'>blip</span></span>
-<span><span class='o'>&#125;</span></span>
-<span></span></code></pre>
-
-</div>
-
-------------------------------------------------------------------------
-
-### :sleeping_face: Código lo más sencillo posible: `switch()`
-
-:eyes:
-
-<div class="highlight">
-
-<pre class='chroma'><code class='language-r' data-lang='r'><span><span class='kr'>if</span> <span class='o'>(</span><span class='nv'>type</span> <span class='o'>==</span> <span class='s'>"mean"</span><span class='o'>)</span> <span class='o'>&#123;</span></span>
-<span>  <span class='nf'><a href='https://rdrr.io/r/base/mean.html'>mean</a></span><span class='o'>(</span><span class='nv'>x</span><span class='o'>)</span></span>
-<span><span class='o'>&#125;</span> <span class='kr'>else</span> <span class='kr'>if</span> <span class='o'>(</span><span class='nv'>type</span> <span class='o'>==</span> <span class='s'>"median"</span><span class='o'>)</span> <span class='o'>&#123;</span></span>
-<span>  <span class='nf'><a href='https://rdrr.io/r/stats/median.html'>median</a></span><span class='o'>(</span><span class='nv'>x</span><span class='o'>)</span></span>
-<span><span class='o'>&#125;</span> <span class='kr'>else</span> <span class='kr'>if</span> <span class='o'>(</span><span class='nv'>type</span> <span class='o'>==</span> <span class='s'>"trimmed"</span><span class='o'>)</span> <span class='o'>&#123;</span></span>
-<span>  <span class='nf'><a href='https://rdrr.io/r/base/mean.html'>mean</a></span><span class='o'>(</span><span class='nv'>x</span>, trim <span class='o'>=</span> <span class='m'>.1</span><span class='o'>)</span></span>
-<span><span class='o'>&#125;</span></span></code></pre>
-
-</div>
-
-------------------------------------------------------------------------
-
-### Código lo más sencillo posible: `switch()`
-
-:sparkles:
-
-<div class="highlight">
-
-<pre class='chroma'><code class='language-r' data-lang='r'><span><span class='kr'><a href='https://rdrr.io/r/base/switch.html'>switch</a></span><span class='o'>(</span></span>
-<span>  <span class='nv'>type</span>,</span>
-<span>  mean <span class='o'>=</span> <span class='nf'><a href='https://rdrr.io/r/base/mean.html'>mean</a></span><span class='o'>(</span><span class='nv'>x</span><span class='o'>)</span>,</span>
-<span>  median <span class='o'>=</span> <span class='nf'><a href='https://rdrr.io/r/stats/median.html'>median</a></span><span class='o'>(</span><span class='nv'>x</span><span class='o'>)</span>,</span>
-<span>  trimmed <span class='o'>=</span> <span class='nf'><a href='https://rdrr.io/r/base/mean.html'>mean</a></span><span class='o'>(</span><span class='nv'>x</span>, trim <span class='o'>=</span> <span class='m'>.1</span><span class='o'>)</span></span>
-<span><span class='o'>)</span></span>
-<span></span></code></pre>
-
-</div>
-
-------------------------------------------------------------------------
-
-### Código lo más simple posible: lógica
-
-Para leer más: [El código huele y se siente](https://github.com/jennybc/code-smells-and-feels) por Jenny Bryan
-
-*:toolbox: Examina la lógica de una o varias funciones. ¿Podrías simplificarla con retornos anticipados, funciones auxiliares? ¿Cambiar la ordén de las condiciones de ifelse?*
-
-------------------------------------------------------------------------
-
-## :sleeping_face: Menos dolores de cabeza: lintr+flir
-
-[lintr](https://lintr.r-lib.org/index.html) encuentra problemas en código.
-
-[flir](https://flir.etiennebacher.com/) también, puede reparar algunos.
-
-Para leer más: [Cómo uso lintr](https://masalmon.eu/2024/08/28/lintr-3-steps/) en mi blog.
-
-*:toolbox: Intenta mejorar tu paquete con flir y/o lintr*
-
-------------------------------------------------------------------------
-
-### :sleeping_face: Estética del código
-
-Algunos de ellos sólo son relevantes si ves código.
-
--   ¿Usar alineación?
--   Utiliza párrafos
--   Utiliza comentarios de "cabecera" para la navegación.
-
-------------------------------------------------------------------------
-
-#### :sleeping_face: Alineación de códigos
-
--   Alinea los argumentos en las definiciones de función.
-
--   ¿Más alineación vertical? No soy sensible a ello :innocent:
-
-------------------------------------------------------------------------
-
-#### :sleeping_face: Párrafos
-
-Un párrafo = una idea (¡también sirve para escribir prosa!).
-
-El espacio vertical es costoso (¿qué cabe en la pantalla?)
-
-<div class="highlight">
-
-<pre class='chroma'><code class='language-r' data-lang='r'><span><span class='nv'>head</span> <span class='o'>&lt;-</span> <span class='nf'>collect_metadata</span><span class='o'>(</span><span class='nv'>website</span><span class='o'>)</span></span>
-<span><span class='nv'>head_string</span> <span class='o'>&lt;-</span> <span class='nf'>stringify</span><span class='o'>(</span><span class='nv'>head</span><span class='o'>)</span></span>
-<span></span>
-<span><span class='nv'>body</span> <span class='o'>&lt;-</span> <span class='nf'>create_content</span><span class='o'>(</span><span class='nv'>website</span><span class='o'>)</span></span>
-<span><span class='nv'>body_string</span> <span class='o'>&lt;-</span> <span class='nf'>stringify</span><span class='o'>(</span><span class='nv'>body</span><span class='o'>)</span></span>
-<span></span></code></pre>
-
-</div>
-
-------------------------------------------------------------------------
-
-#### :sleeping_face: Comentarios en la cabecera
-
-En RStudio IDE o Positron. En cualquier caso, es bueno para indicar la estructura de alto nivel dentro de un script.
-
-<div class="highlight">
-
-<pre class='chroma'><code class='language-r' data-lang='r'><span><span class='c'># Header level 1 ----</span></span>
-<span><span class='nv'>more</span></span>
-<span><span class='nv'>code</span></span>
-<span></span>
-<span><span class='c'>## Header level 2 ----</span></span>
-<span><span class='nv'>more</span></span>
-<span><span class='nv'>code</span></span></code></pre>
-
-</div>
-
-------------------------------------------------------------------------
-
-### :sleeping_face: Estética del código
-
-*:toolbox: Abre uno o varios scripts, ¿puedes mejorar la estética? ¿Usar [Air](https://posit-dev.github.io/air/) en todo el paquete?*
-
-------------------------------------------------------------------------
-
-### :sleeping_face: Menos comentarios / código autoexplicativo
-
-Los comentarios son como pequeñas alertas. ¡No generes fatiga!
-
-Los comentarios que repiten el código quedan desfasados.
-
-------------------------------------------------------------------------
-
-### :sleeping_face: Menos comentarios / código autoexplicativo
-
-``` r
-# use only non empty strings
-if (!is.na(x) && nzchar(x)) {
-  use_string(x)
-}
-```
-
-------------------------------------------------------------------------
-
-### :sleeping_face: Menos comentarios / código autoexplicativo
-
-``` r
-is_non_empty_string <- function(x) {
-  !is.na(x) && nzchar(x)
-}
-
-if (is_non_empty_string(x)) {
-  use_string(x)
-}
-```
-
-------------------------------------------------------------------------
-
-### :sleeping_face: Menos comentarios / código autoexplicativo
-
-Más información: <https://blog.r-hub.io/2023/01/26/code-comments-self-explaining-code/>
-
-*:toolbox: ¿Existen posibilidades de hacer menos comentarios (¡o más comentarios!) en algunos de tus guiones?*
-
-------------------------------------------------------------------------
-
-## Código :microphone: `stop()` :microphone:
-
--   "Early return".
--   Estética del código.
--   Menos comentarios/código autoexplicativo.
-
-------------------------------------------------------------------------
-
-## Código :microphone: `stop()` :microphone:
-
--   "Early return".
--   Estética del código.
--   Menos comentarios/código autoexplicativo.
-
-Por favor, publica en el chat
-
--   ¡Algo que te haya parecido interesante!
--   ¡Algo con lo que no estabas de acuerdo!
--   ¿Una experiencia buena/mala reciente con estas herramientas?
+- ¡Algo que te haya parecido interesante!
+- ¡Algo con lo que no estabas de acuerdo!
+- ¿Una experiencia buena/mala?
 
 ------------------------------------------------------------------------
 
@@ -496,17 +262,19 @@ El código está cubierto por el código de tests, ¡así que podemos asumir má
 
 ### Tests ideales
 
--   Autónomas.
+- Autónomas.
 
--   Se pueden ejecutar de forma interactiva. [`testthat::test_path()`](https://testthat.r-lib.org/reference/test_path.html).
+- Se pueden ejecutar de forma interactiva. [`testthat::test_path()`](https://testthat.r-lib.org/reference/test_path.html).
 
--   Sin "fugas". {withr}. [`withr::local_options()`](https://withr.r-lib.org/reference/with_options.html), [`withr::local_tempdir()`](https://withr.r-lib.org/reference/with_tempfile.html)...
+- Sin "fugas". {withr}. [`withr::local_options()`](https://withr.r-lib.org/reference/with_options.html), [`withr::local_tempdir()`](https://withr.r-lib.org/reference/with_tempfile.html)...
 
 ------------------------------------------------------------------------
 
-### Ejemplo: {swamp}
+### Ejemplos
 
-Exploremos <https://github.com/maelle/swamp>
+{saperlipopette} <https://github.com/ropensci-training/saperlipopette/blob/main/tests/testthat/test-exo-blame.R>
+
+{babelquarto} <https://github.com/ropensci-review-tools/babelquarto/blob/main/tests/testthat/test-render.R>
 
 *:toolbox: ¿Algunas de tus tests tienen código de nivel superior? ¿Puedes crear archivos y funciones de ayuda, y repetir la creación de objetos en cada prueba?*
 
@@ -518,8 +286,7 @@ Mi código
 
 <div class="highlight">
 
-<pre class='chroma'><code class='language-r' data-lang='r'><span></span>
-<span><span class='nv'>is_internet_down</span> <span class='o'>&lt;-</span> <span class='kr'>function</span><span class='o'>(</span><span class='o'>)</span> <span class='o'>&#123;</span></span>
+<pre class='chroma'><code class='language-r' data-lang='r'><span><span class='nv'>is_internet_down</span> <span class='o'>&lt;-</span> <span class='kr'>function</span><span class='o'>(</span><span class='o'>)</span> <span class='o'>&#123;</span></span>
 <span>  <span class='o'>!</span><span class='nf'>curl</span><span class='nf'>::</span><span class='nf'><a href='https://jeroen.r-universe.dev/curl/reference/nslookup.html'>has_internet</a></span><span class='o'>(</span><span class='o'>)</span></span>
 <span><span class='o'>&#125;</span></span>
 <span></span>
@@ -542,12 +309,10 @@ En el test,
 
 <div class="highlight">
 
-<pre class='chroma'><code class='language-r' data-lang='r'><span></span>
-<span><span class='nf'>test_that</span><span class='o'>(</span><span class='s'>"my_complicated_code() notes the absence of internet"</span>, <span class='o'>&#123;</span></span>
+<pre class='chroma'><code class='language-r' data-lang='r'><span><span class='nf'>test_that</span><span class='o'>(</span><span class='s'>"my_complicated_code() notes the absence of internet"</span>, <span class='o'>&#123;</span></span>
 <span>  <span class='nf'>local_mocked_bindings</span><span class='o'>(</span>is_internet_down <span class='o'>=</span> <span class='kr'>function</span><span class='o'>(</span><span class='nv'>...</span><span class='o'>)</span> <span class='kc'>TRUE</span><span class='o'>)</span></span>
 <span>  <span class='nf'>expect_message</span><span class='o'>(</span><span class='nf'>my_complicated_code</span><span class='o'>(</span><span class='o'>)</span>, <span class='s'>"No internet"</span><span class='o'>)</span></span>
-<span><span class='o'>&#125;</span><span class='o'>)</span></span>
-<span></span></code></pre>
+<span><span class='o'>&#125;</span><span class='o'>)</span></span></code></pre>
 
 </div>
 
@@ -567,29 +332,22 @@ y <https://testthat.r-lib.org/dev/articles/challenging-tests.html>
 
 ------------------------------------------------------------------------
 
-## Tests :microphone: `stop()` :microphone:
+## Tests <br/> :microphone: `stop()` :microphone:
 
--   DAMP/DRY
--   Código de prueba diferente de código
--   Pruebas ideales (autónomas, pueden ejecutarse interactivamente, sin fugas)
--   Mocking
+- DAMP/DRY
+- Código de prueba diferente de código
+- Pruebas ideales (autónomas, pueden ejecutarse interactivamente, sin fugas)
+- Mocking
 
-------------------------------------------------------------------------
-
-## Tests :microphone: `stop()` :microphone:
-
--   DAMP/DRY
--   Código de prueba diferente de código
--   Pruebas ideales (autónomas, pueden ejecutarse interactivamente, sin fugas)
--   Mocking
+<div class="fragment">
 
 Por favor, publica en el chat
 
--   ¡Algo que te haya parecido interesante!
--   ¡Algo con lo que no estabas de acuerdo!
--   ¿Una experiencia buena/mala reciente con estas herramientas?
+- ¡Algo que te haya parecido interesante!
+- ¡Algo con lo que no estabas de acuerdo!
+- ¿Una experiencia buena/mala?
 
-------------------------------------------------------------------------
+</div>
 
 ## Elige tu propia aventura
 
