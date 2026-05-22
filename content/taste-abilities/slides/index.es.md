@@ -7,7 +7,7 @@ layout: list
 weight: 11
 output: hugodown::md_document
 countdown: true
-rmd_hash: 0093df30e65952a5
+rmd_hash: 1e2525d27f7773e5
 
 ---
 
@@ -224,19 +224,15 @@ Está bien decir no a las peticiones de funciones. [Ejemplo](https://github.com/
 - Dependencias a evitar.
 - Definir el ámbito del paquete.
 
-------------------------------------------------------------------------
-
-## Menos código <br/> :microphone: `stop()` :microphone:
-
-- Elegir dependencias.
-- Dependencias a evitar.
-- Definir el ámbito del paquete.
+<div class="fragment">
 
 Por favor, escribi en el chat
 
 - ¡Algo que te haya parecido interesante!
 - ¡Algo con lo que no estabas de acuerdo!
 - ¿Una experiencia buena/mala?
+
+</div>
 
 ------------------------------------------------------------------------
 
@@ -348,6 +344,117 @@ Por favor, publica en el chat
 - ¿Una experiencia buena/mala?
 
 </div>
+
+## Cada cosa en su sitio
+
+------------------------------------------------------------------------
+
+## Secretos
+
+Llaves de API, etc.
+
+~~.Renviron~~
+
+------------------------------------------------------------------------
+
+## {keyring}
+
+``` r
+# Usuari@, 1 vez para cada ordenador
+keyring::key_set("deepl")
+
+# Usuari@, cada vez que usa tu paquete
+Sys.setenv(DEEPL_API_KEY = keyring::key_get("deepl"))
+
+# Tu paquete
+Sys.getenv("DEEPL_API_KEY")
+```
+
+------------------------------------------------------------------------
+
+## Secretos
+
+*:toolbox: ¿Podés aconsejar keyring en la documentación de tu paquete?*
+
+<https://blog.r-hub.io/2024/02/28/key-advantages-of-using-keyring/>
+
+------------------------------------------------------------------------
+
+## Datos
+
+<div class="{incremental}">
+
+- En el paquete para usuarios y usuarias: [`data/`](https://r-pkgs.org/data.html#sec-data-data)
+
+- En el paquete para el paquete: [`R/sysdata.rda`](https://r-pkgs.org/data.html#sec-data-sysdata)
+
+- Desde el paquete: carpetas de <usuari@s>: [`tools::R_user_dir()`](https://rdrr.io/r/tools/userdir.html). Demo!
+
+</div>
+
+------------------------------------------------------------------------
+
+## `tools::R_user_dir()`
+
+¿Cómo buscar ejemplos?
+
+<https://github.com/search/advanced>
+
+------------------------------------------------------------------------
+
+## `tools::R_user_dir()`
+
+Ejemplo 1 <https://github.com/matt-dray/tamRgo> + <https://www.rostrum.blog/posts/2022-11-13-tamrgo/>
+
+Ejemplo 2 <https://github.com/search?q=repo%3Aropensci%2Fcomtradr%20R_user_dir&type=code>
+
+*:toolbox: ¿Tiene tu paquete algo que guardar entre las sesiones?*
+
+------------------------------------------------------------------------
+
+## Resultados repetidos
+
+En la misma sesión, las mismas computaciones... caching?!
+
+{memoise}
+
+``` r
+.a <- function() {
+  Sys.sleep(5)
+  "Hola"
+}
+a <- memoise::memoise(.a)
+a()
+a()
+```
+
+------------------------------------------------------------------------
+
+## Resultados repetidos
+
+<https://blog.r-hub.io/2021/07/30/cache/>
+
+*:toolbox: ¿Podría usar caching tu paquete?*
+
+------------------------------------------------------------------------
+
+## Cada cosa en su sitio <br/> :microphone: `stop()` :microphone:
+
+- {keyring} para secretos
+- Carpetas de usuarias (user directories)
+- Caching
+
+<div class="fragment">
+
+Por favor, publica en el chat
+
+- ¡Algo que te haya parecido interesante!
+- ¡Algo con lo que no estabas de acuerdo!
+- ¿Una experiencia buena/mala?
+
+</div>
+
+------------------------------------------------------------------------
 
 ## Elige tu propia aventura
 
