@@ -7,7 +7,7 @@ layout: list
 weight: 11
 output: hugodown::md_document
 countdown: true
-rmd_hash: 1e2525d27f7773e5
+rmd_hash: 7a218790346f956a
 
 ---
 
@@ -353,7 +353,7 @@ Por favor, publica en el chat
 
 Llaves de API, etc.
 
-~~.Renviron~~
+~~.Renviron~~ {keyring}!
 
 ------------------------------------------------------------------------
 

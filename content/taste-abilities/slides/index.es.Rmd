@@ -362,7 +362,7 @@ Por favor, publica en el chat
 
 Llaves de API, etc.
 
-~~.Renviron~~ 
+~~.Renviron~~ {keyring}!
 
 ***
 
