@@ -1,0 +1,12 @@
+base
+methods
+datasets
+utils
+grDevices
+graphics
+stats
+reprex
+usethis
+devtools
+gert
+magrittr
